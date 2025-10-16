@@ -23,10 +23,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY . /app
 WORKDIR /app
 
-# Build the 'image_check' tool from the Rust source
-RUN cargo build --release && \
-    cp target/release/imagecheck image_check
-
 # Build the main CLI and GUI applications using the Makefile
 RUN make
 
