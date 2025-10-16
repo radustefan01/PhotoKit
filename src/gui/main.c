@@ -1,5 +1,6 @@
 #include "app_state.h"
 #include "ui.h"
+#include <gio/gio.h> // This defines G_APPLICATION_DEFAULT_FLAGS
 
 int main(int argc, char **argv)
 {

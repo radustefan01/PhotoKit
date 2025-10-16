@@ -17,7 +17,7 @@ void activate(GtkApplication *app, gpointer user_data)
 
 	// Set window icon
 	GError *error = NULL;
-	gtk_window_set_icon_from_file(GTK_WINDOW(app_state->window), "data/PhotoKit.jpeg", &error);
+	gtk_window_set_icon_name(GTK_WINDOW(app_state->window), "data/PhotoKit.jpeg");
 	if (error) {
 		g_warning("Could not set window icon: %s", error->message);
 		g_error_free(error);
