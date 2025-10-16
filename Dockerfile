@@ -19,12 +19,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgtk-4-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python packages
-RUN pip3 install \
-    argparse \
-    pathlib \
-    recordclass
-
 # Copy the entire project into the container
 COPY . /app
 WORKDIR /app
